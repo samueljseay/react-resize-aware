@@ -28,7 +28,7 @@
   "source": "src/index.js",
   "scripts": {
     "start": "microbundle watch",
-    "prepare": "microbundle --name useResizeAware --globals react=React --jsx React.createElement && cp -f dist/index.umd.js docs/react-resize-aware.js && flow-copy-source src dist && cp src/index.d.ts dist/index.d.ts"
+    "prepare": "microbundle --name useResizeAware --jsx jsx --jsxImportSource react --globals react/jsx-runtime=jsx"
   },
   "files": [
     "dist/*",
@@ -37,8 +37,8 @@
   "devDependencies": {
     "flow-bin": "^0.113.0",
     "flow-copy-source": "^2.0.9",
-    "microbundle": "0.12.0-next.6",
-    "react": "16.12.0"
+    "microbundle": "0.14.2",
+    "react": "17.0.2"
   },
   "peerDependencies": {
     "react": "^16.8.0 || 17.x"
